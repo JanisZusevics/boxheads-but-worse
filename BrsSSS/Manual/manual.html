@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>HTML Manual</title>
+  
+  <style>
+        body {
+		font-family: Arial, sans-serif;
+		line-height: 1.6;
+		margin: 20px;
+        }
+        table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+		table-layout: auto;  /* Allow column width to adjust based on content */
+        }
+	tr {
+		display: flex;
+	}
+        td {
+		vertical-align: top;
+		horizontal-align: left;
+		padding: 10px;
+		text-align: left; 
+        }
+	td:first-child {
+    		white-space: nowrap;  /* Prevent wrapping in the first column */
+    		padding-right: 10px;  /* Add a small padding if needed */
+  	}
+  	td:last-child {
+		flex-grow: 1;  /* This will take the remaining space */
+		min-width: 200px;  /* Prevents first column from getting too small */
+  	}
+        img {
+		display: block;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+        }
+  </style></head>
+  
+
+<body>
+<div style="text-align: center;"><!-- Title Section --><big style="font-weight: bold;"><big><big>Brah Rah's Save Some Seconds</big></big></big><br />
+</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td width:="300px" ;="">
+        <br /><br /><br />  
+        <img src="Images/BrsSSS.png" alt="BrsSSS.png" /> 
+      </td>
+      <td>
+        <h2>Addon Overview</h2>
+
+        This addon saves time working with Godots nodes and editors like visual studio code/codium etc.
+        It has a bunch of small tools that make it easier and faster to work with godot.
+
+        <br /><br />
+        
+        <h2>Pre-Requisite Setup:</h2>
+        1. You need to use godot 4.4, 4.5 errs and 4.3 is untested: <br />
+        <img src="Images/Godot_version.png" alt="Godot_version.png" /> <br />
+        2. Extract the archive file <span style="background-color: rgb(218, 254, 220);">BrsSSS.zip</span> into your Godot project's folder.  <br /><br />
+        3. Enable the addon in Project - Project Settings - Plugins: <br />
+        <img src="Images/PluginOn.png" alt="PluginOn.png" /> <br />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Example section 2 -->
+<table>
+  <tbody>
+    <tr>
+      <td width:="300px" ;=""><br /><br /><br />  
+        <img src="Images/NodeSelection.png" alt="" /> <br /><br />
+        <img src="Images/GetRelativePath.png" alt="" />  <br /><br />
+        <img src="Images/Restart_Editor.png" alt="" />  <br />
+        <img src="Images/DeleteGDtemp.png" alt="" />  <br /><br />
+        <img src="Images/Addons.png" alt="" />  <br /><br />
+        <img src="Images/OpenFolders.png" alt="" />  <br /><br />
+        <img src="Images/Manual.png" alt="" />  <br /><br /><br />
+      </td>
+      <td>
+        <h2>Detailed Breakdown:</h2>
+
+<p>
+  <h3>Node to Code:</h3>
+  This feature generates code using the selected node.
+  There are three <span style="background-color: rgb(204, 204, 204);">Selected Node To:</span>
+  buttons, each linked to a corresponding TextEdit field below it.<br />
+  
+  To use this, write your code and use the following placeholders:<br />
+  &lt;&lt;NodeName&gt;&gt; replaces it with the selected node's name.<br />
+  &lt;&lt;NodeType&gt;&gt; replaces it with the selected node's type.<br />
+  &lt;&lt;NodePath&gt;&gt; replaces it with the selected node's path.<br />
+  <br />
+  For example, if you enter:<br />  
+  <span style="background-color: rgb(204, 204, 204);"><i>var &lt;&lt;NodeName&gt;&gt; : &lt;&lt;NodeType&gt;&gt; = &lt;&lt;NodePath&gt;&gt;;</i></span>
+  into one of the TextEdits select a Label node and press  
+  <span style="background-color: rgb(204, 204, 204);">Selected Node To something like:</span>  
+  it will be converted into:  <br />
+  <span style="background-color: rgb(204, 204, 204);"><i>myNode2D : Node2D = SomeContainer/myNode2D;</i></span><br />
+  The result is copied to the clipboard, ready to be pasted into your code editor.
+  <br /><br />
+  <b>Tip:</b> You can use both C#, GDScript.<br />
+</p>
+
+<p>
+  <span style="background-color: rgb(204, 204, 204);">Detect and Set Unique</span><br />
+  This feature detects occurrences of <i>GetNode</i> or <i>get_node</i> in your code and, when enabled, sets the selected node to "Unique."  
+  (Equivalent to: Right-click on a node → Access as Unique Name).  
+</p>
+
+<p>
+  <br />
+  <span style="background-color: rgb(204, 204, 204);">Set Node1 and Get Relative Path</span><br />
+  Retrieves the relative path between two nodes and copies it to the clipboard.  
+  <b>Usage:</b>  
+  - Select a node and press <span style="background-color: rgb(204, 204, 204);">Set Node1</span> to set it as the starting point.  
+  - Then, select the destination node and press <span style="background-color: rgb(204, 204, 204);">Get Relative Path</span>.  
+</p>
+
+<p>
+  <span style="background-color: rgb(204, 204, 204);">Restart Editor</span><br />
+  Restarts the Godot editor.
+</p>
+
+<p>
+
+  <span style="background-color: rgb(204, 204, 204);">Del GDtemp</span><br />
+  Deletes the .godot cache folder. Useful for resolving certain errors produced by Godot.
+</p>
+
+<p>
+  <br />
+  <b>Addons:</b> <br />
+  Enables, disables, or restarts addons listed in the TextEdit field.<br />
+  <b>Syntax:</b>  
+  <i>"AddonName", "Another Addon's Name", "etc."</i>  
+  Anything inside quotation marks is recognized as an addon and will be affected by the buttons.
+</p><br /><br /><br />
+
+<p>
+  <b>Open Folders:</b> <br />
+  <span style="background-color: rgb(204, 204, 204);">User</span> Opens the user folder (user://) in the system's file browser.<br />
+  <span style="background-color: rgb(204, 204, 204);">Project</span> Opens the current project's folder (res://).
+</p>
+
+<p>
+  <br />
+  <span style="background-color: rgb(204, 204, 204);">Open Manual</span><br />
+  Opens the manual in the system's default web browser.
+</p><br />
+
+<br />
+
+<h2>Node Buttons Usage:</h2>
+<video width="960" height="507" controls>
+  <source src="Videos/What_the_main_buttons_do.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+<h2>Addon Usage: Saving Time Handling the .NET Disconnect Issue:</h2>
+<video width="960" height="520" controls>
+  <source src="Videos/Handle_.net-disconnect.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+<br /><br />
+
+<h2>License:</h2>
+<pre>
+This addon is licensed under the Mozilla Public License 2.0.
+You are free to use this addon as a tool in your projects.
+You may use, modify, and incorporate the methods and classes from this addon into your own projects, including commercial projects. However, if you do so, you must provide credit.
+You may NOT sell, rebrand, or distribute this addon or its parts as a standalone product, whether modified or unmodified, without open-sourcing your modifications under the MPL-2.0 license.
+For full license details, see https://www.mozilla.org/en-US/MPL/2.0/
+</pre>
+
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br />
+
+<br />
+
+</body></html>

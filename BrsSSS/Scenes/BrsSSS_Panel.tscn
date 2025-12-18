@@ -1,0 +1,331 @@
+[gd_scene load_steps=7 format=3 uid="uid://bga6k72vxykh2"]
+
+[ext_resource type="Theme" uid="uid://dlouswxlxe6ib" path="res://addons/BrsLib/GDThemes/DarkNYellow.tres" id="1_npmw2"]
+[ext_resource type="Theme" uid="uid://dloussxlxe6ib" path="res://addons/BrsBranchCraft/Template_DefaultTheme.tres" id="2_66pit"]
+[ext_resource type="Script" uid="uid://c76pj5ebey7v3" path="res://addons/BrsSSS/Scripts/BrsSSS_Panel.gd" id="2_tp6p0"]
+[ext_resource type="Script" uid="uid://dh7exfj705c7x" path="res://addons/BrsSSS/Scripts/GDScript_Restart.gd" id="4_v1q17"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b66hp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82s3j"]
+
+[node name="BrsSSS" type="Panel"]
+offset_top = 1.0
+offset_right = 1206.0
+offset_bottom = 1107.0
+theme = ExtResource("1_npmw2")
+script = ExtResource("2_tp6p0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(260, 900)
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 800.0
+
+[node name="Main_VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="Test_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Test"
+
+[node name="AddonName_Label" type="Label" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Brs Save Some Seconds"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Spacer_HSeparator8" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="Custom_VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NodeToCode_Label" type="Label" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Node to Code:"
+horizontal_alignment = 1
+
+[node name="Spacer_HSeparator3" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="SelectedToCustom1_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_66pit")
+text = "Selected Node to:"
+
+[node name="CustomTemplate1_TextEdit" type="TextEdit" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "var <<NodeName>> : <<NodeType>> = get_node(\"%<<NodeName>>\") as <<NodeType>>"
+
+[node name="Spacer_HSeparator4" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="SelectedToCustom2_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_66pit")
+text = "Selected Node to:"
+
+[node name="CustomTemplate2_TextEdit" type="TextEdit" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "@export var <<NodeName>> : <<NodeType>>"
+
+[node name="Spacer_HSeparator5" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="SelectedToCustom3_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_66pit")
+text = "Selected Node to:"
+
+[node name="CustomTemplate3_TextEdit" type="TextEdit" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "var <<NodeName>> : <<NodeType>>
+<<NodeName>> = get_node(\"%<<NodeName>>\") as <<NodeType>>
+
+<<NodeName>>.pressed.connect(_on_<<NodeName>>_pressed)
+
+func _on_<<NodeName>>_pressed() -> void:
+	# Your code here
+	pass"
+
+[node name="ListExamples_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "List Examples"
+
+[node name="SetUnique_CheckBox" type="CheckBox" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+button_pressed = true
+text = "Detect and Set Unique"
+
+[node name="Spacer_HSeparator9" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer/Custom_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_82s3j")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Node1_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Set Node1"
+
+[node name="Node2_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Get Relative Path
+"
+
+[node name="Spacer_HSeparator10" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_82s3j")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="RestartEditor_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "RestartEditor"
+script = ExtResource("4_v1q17")
+
+[node name="DelGDtemp_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Del GDtemp"
+
+[node name="Spacer_HSeparator4" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="Addons_VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Addons_Label" type="Label" parent="ScrollContainer/Main_VBoxContainer/Addons_VBoxContainer"]
+layout_mode = 2
+text = " Addons:"
+horizontal_alignment = 1
+
+[node name="Addons_HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Main_VBoxContainer/Addons_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="DisableAddons_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Addons_VBoxContainer/Addons_HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Disable"
+
+[node name="EnableAddons_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Addons_VBoxContainer/Addons_HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Enable"
+
+[node name="RestartAddons_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Addons_VBoxContainer/Addons_HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Restart"
+
+[node name="Addons_CenterContainer" type="CenterContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+
+[node name="Addons_MarginContainer" type="MarginContainer" parent="ScrollContainer/Main_VBoxContainer/Addons_CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="AddonNames_TextEdit" type="TextEdit" parent="ScrollContainer/Main_VBoxContainer/Addons_CenterContainer/Addons_MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "\"BrsSSS\""
+placeholder_text = "\"SomeAddon\", \"Some Other Addon\", etc."
+wrap_mode = 1
+
+[node name="Spacer_HSeparator5" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="Folders_VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Folders_Label" type="Label" parent="ScrollContainer/Main_VBoxContainer/Folders_VBoxContainer"]
+layout_mode = 2
+text = " Open Folders:"
+horizontal_alignment = 1
+
+[node name="Folders_HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Main_VBoxContainer/Folders_VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="OpenUserFolder_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Folders_VBoxContainer/Folders_HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "User"
+
+[node name="OpenProjectFolder_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/Folders_VBoxContainer/Folders_HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_66pit")
+text = "Project"
+
+[node name="Spacer_HSeparator6" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="Manual_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Open Manual"
+
+[node name="Spacer_HSeparator7" type="HSeparator" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_constants/separation = 5
+theme_override_styles/separator = SubResource("StyleBoxFlat_b66hp")
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/Main_VBoxContainer"]
+layout_mode = 2
+
+[node name="GotIt_VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Main_VBoxContainer/CenterContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Main_VBoxContainer/CenterContainer/GotIt_VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="TextEdit01_TextEdit" type="TextEdit" parent="ScrollContainer/Main_VBoxContainer/CenterContainer/GotIt_VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "If you like this addon and know GDs source and c++ please make signals for Build Project (Alt+B)! 
+
+I really really really need theese signals! With I can unload .net stuff safely. 
+Atm when build is started .net disconnects because build doesn't trigger _ExitTree or similar. 
+
+I have 3 great addons that I can't publish due to the: 
+.NET: Failed to unload assemblies issue.
+
+If you don't know c++ please ask the GD staff to make this!"
+placeholder_text = "If you like this addon and know GDs source and c++ please make signals for Build Project (Alt+B)! 
+
+I really really really need theese signals! With I can unload .net stuff safely. 
+Atm when build is started .net disconnects because build doesn't trigger _ExitTree or similar. 
+
+I have 3 great addons that I can't publish due to the: 
+.NET: Failed to unload assemblies issue.
+
+If you don't know c++ please ask the GD staff to make this!"
+wrap_mode = 1
+
+[node name="GotIt_Button" type="Button" parent="ScrollContainer/Main_VBoxContainer/CenterContainer/GotIt_VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Got it!"
