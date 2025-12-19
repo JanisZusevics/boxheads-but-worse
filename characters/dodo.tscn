@@ -1,10 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://cavmhfyjctqfq"]
+[gd_scene load_steps=26 format=3 uid="uid://3pemqis3lvpt"]
 
-[ext_resource type="Texture2D" uid="uid://bqulq84t1168s" path="res://art/chicken.png" id="1_jimw8"]
-[ext_resource type="Script" uid="uid://chabsk2vf3xjr" path="res://characters/chckn.gd" id="1_n2x73"]
+[ext_resource type="Script" uid="uid://dnsdrdadg7a1v" path="res://characters/dodo.gd" id="1_r6cml"]
+[ext_resource type="Texture2D" uid="uid://dka763k724g3o" path="res://art/dodo.png" id="2_h6xv6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6m3vs"]
-size = Vector2(4, 5)
+size = Vector2(2, 9)
 
 [sub_resource type="Animation" id="Animation_6m3vs"]
 length = 0.001
@@ -228,22 +228,23 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_5ln4u")
 states/walk/position = Vector2(516, 125)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_j4073")]
 
-[node name="Chicken" type="CharacterBody2D"]
-script = ExtResource("1_n2x73")
-move_speed = 80.0
+[node name="dodo" type="CharacterBody2D"]
+script = ExtResource("1_r6cml")
+move_speed = 50.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 y_sort_enabled = true
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_jimw8")
+texture = ExtResource("2_h6xv6")
+offset = Vector2(0, -20)
 hframes = 3
 vframes = 4
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_as_relative = false
-position = Vector2(0, 0.5)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_6m3vs")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -255,7 +256,7 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_eburu")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0.00034546852, -0.89237666)
-parameters/walk/blend_position = Vector2(-0.13920552, 0.29147983)
+parameters/walk/blend_position = Vector2(-0.0008459091, 0.9941025)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0

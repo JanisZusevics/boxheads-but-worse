@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://qkad8we0lwf0"]
+
+[ext_resource type="Texture2D" uid="uid://cttu7ystd0vwq" path="res://art/decorations-medieval.png" id="1_bw6cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bw6cr"]
+size = Vector2(36.5, 21)
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_bw6cr")
+offset = Vector2(5, -10)
+region_enabled = true
+region_rect = Rect2(135.9488, 738.93396, 80.07808, 55.05548)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.75, -5.5)
+shape = SubResource("RectangleShape2D_bw6cr")

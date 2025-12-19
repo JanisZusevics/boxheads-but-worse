@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://cttu7ystd0vwq"
+path="res://.godot/imported/decorations-medieval.png-53d2c9716bd5e0b8ecc5a9d0835b08e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/decorations-medieval.png"
+dest_files=["res://.godot/imported/decorations-medieval.png-53d2c9716bd5e0b8ecc5a9d0835b08e1.ctex"]
 
 [params]
 

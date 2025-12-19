@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://dpgs20xaohxd5"
+path="res://.godot/imported/llama_walk.png-81e589756b41f58bfb471a0fd3562b64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/llama_walk.png"
+dest_files=["res://.godot/imported/llama_walk.png-81e589756b41f58bfb471a0fd3562b64.ctex"]
 
 [params]
 

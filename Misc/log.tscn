@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1ccsc5qyes44"]
+
+[ext_resource type="Script" uid="uid://cfyy3xwotwtxr" path="res://Misc/tree_1.gd" id="1_m5xlq"]
+[ext_resource type="Texture2D" uid="uid://c7rjg8a4atehw" path="res://art/tileset_plains_070419_zp.png" id="2_7ohtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1d4jr"]
+size = Vector2(25, 10)
+
+[node name="Log" type="StaticBody2D"]
+script = ExtResource("1_m5xlq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_7ohtb")
+region_enabled = true
+region_rect = Rect2(218.77335, 254.00235, 31.269913, 16.048584)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1d4jr")

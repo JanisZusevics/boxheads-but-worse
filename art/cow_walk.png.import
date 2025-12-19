@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://gnp5p250oqkf"
+path="res://.godot/imported/cow_walk.png-25db530bbda35c1b7bb63e696463a7c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/cow_walk.png"
+dest_files=["res://.godot/imported/cow_walk.png-25db530bbda35c1b7bb63e696463a7c3.ctex"]
 
 [params]
 

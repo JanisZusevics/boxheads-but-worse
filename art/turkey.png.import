@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://cxm0sxkntvpt8"
+path="res://.godot/imported/turkey.png-cc5364107da9d8db33d3adad3397ec92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/turkey.png"
+dest_files=["res://.godot/imported/turkey.png-cc5364107da9d8db33d3adad3397ec92.ctex"]
 
 [params]
 

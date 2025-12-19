@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://dyeq58cunroc0"
+path="res://.godot/imported/pig.png-5856e66f2aef49452e14116c183c1d4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/PNG/64x64/pig.png"
+dest_files=["res://.godot/imported/pig.png-5856e66f2aef49452e14116c183c1d4e.ctex"]
 
 [params]
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkycmrg053sl7"]
+
+[ext_resource type="Texture2D" uid="uid://c5u4hcf0yvbot" path="res://art/tileset_plains_070419_zp.png" id="1_4yuft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xr4a5"]
+size = Vector2(138, 20)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -5)
+shape = SubResource("RectangleShape2D_xr4a5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("1_4yuft")
+offset = Vector2(0, -30)
+region_enabled = true
+region_rect = Rect2(215.91046, 108.047775, 155.22925, 71.93715)

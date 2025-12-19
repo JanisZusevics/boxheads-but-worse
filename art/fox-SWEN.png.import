@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwgn6nikdlxrx"
-path="res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"
+uid="uid://ceva0j3tbn2q6"
+path="res://.godot/imported/fox-SWEN.png-b135a73dc572b318b973f7770280044f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/zombies_and_skeletons.png"
-dest_files=["res://.godot/imported/zombies_and_skeletons.png-55e2255bceba0022474d482c3c38041f.ctex"]
+source_file="res://art/fox-SWEN.png"
+dest_files=["res://.godot/imported/fox-SWEN.png-b135a73dc572b318b973f7770280044f.ctex"]
 
 [params]
 
